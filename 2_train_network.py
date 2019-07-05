@@ -14,7 +14,9 @@ import numpy as np
 import tensorflow as tf
 # import data2midi as d2m
 
-main_path = '/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/simple_evo'
+cwd = os.getcwd()
+
+main_path = cwd
 
 # npz_data = np.load('saved_data/training_data.npz')
 npz_data = np.load('saved_data/training_data.npz')

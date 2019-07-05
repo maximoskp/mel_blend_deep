@@ -8,12 +8,15 @@ Created on Thu Aug  2 09:18:26 2018
 
 # import music21 as m21
 import numpy as np
+import os
 # import matplotlib.pyplot as plt
 # import pickle
 # import tensorflow as tf
 # import data2midi as d2m
 
-main_path = '/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/simple_evo'
+cwd = os.getcwd()
+
+main_path = cwd
 
 npz_data = np.load('saved_data/initial_data.npz')
 b_in = npz_data['b_in']

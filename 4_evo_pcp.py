@@ -7,7 +7,7 @@ Created on Thu Aug  2 09:18:26 2018
 """
 
 # import music21 as m21
-# import os
+import os
 import numpy as np
 import random
 from deap import base
@@ -32,7 +32,9 @@ target_features = [0.70, 1.97, 0.00, 0.21, 0.61, 0.78]
 # highest small intervals
 # target_features = [0.85, 0.69, 1.00, 0.21, 0.54, 0.76]
 
-main_path = '/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/simple_evo'
+cwd = os.getcwd()
+
+main_path = cwd
 
 # npz_data = np.load('saved_data/training_data.npz')
 with open('saved_data/melodies.pickle', 'rb') as handle:

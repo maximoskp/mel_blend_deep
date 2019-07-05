@@ -26,7 +26,9 @@ netEval = ne.NetEval('epoch_394')
 # highest small intervals
 target_features = [0.85, 0.69, 1.00, 0.21, 0.54, 0.76]
 
-main_path = '/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/evo_feature_LSTM'
+cwd = os.getcwd()
+
+main_path = cwd
 
 # npz_data = np.load('saved_data/training_data.npz')
 with open('saved_data/melodies.pickle', 'rb') as handle:
