@@ -8,7 +8,7 @@ Created on Thu Aug  2 09:18:26 2018
 
 # import music21 as m21
 import sys
-# import os
+import os
 import glob
 import piece_info
 import numpy as np
@@ -17,7 +17,9 @@ import pickle
 # import tensorflow as tf
 # import data2midi as d2m
 
-main_path = '/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/simple_evo'
+cwd = os.getcwd()
+
+main_path = cwd
 chinese_folder = '/data/test_data';
 # chinese_folder = '/data/chinese_tests';
 # german_folder = '/data/german';
