@@ -65,4 +65,4 @@ learning_rate = 0.001
 epochs = 2000
 temperature = 0.5
 
-np.savez('saved_data/training_data.npz', max_len=max_len, batch_size=batch_size, step=step, input_rows=input_rows, output_rows=output_rows, train_data=train_data, target_data=target_data)
+np.savez('saved_data/training_data.npz', max_len=max_len, batch_size=batch_size, step=step, input_rows=input_rows, output_rows=output_rows, train_data=train_data, target_data=target_data, num_units=num_units, learning_rate=learning_rate, epochs=epochs, temperature=temperature)
