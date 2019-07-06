@@ -30,12 +30,17 @@ output_rows = npz_data['output_rows']
 train_data = npz_data['train_data']
 target_data = npz_data['target_data']
 
-num_units = [128, 256, 128]
-'''
-learning_rate = 0.001
-epochs = 100
-'''
-temperature = 0.5
+num_units = npz_data['num_units']
+learning_rate = npz_data['learning_rate']
+epochs = npz_data['epochs']
+temperature = npz_data['temperature']
+
+# num_units = [128, 256, 128]
+# '''
+# learning_rate = 0.001
+# epochs = 100
+# '''
+# temperature = 0.5
 
 tf.reset_default_graph()
 

@@ -30,7 +30,7 @@ with open('saved_data/oh_to_pd_dict.pickle', 'rb') as handle:
     oh_to_pd_dict = pickle.load(handle)
 '''
 
-max_len = 32
+max_len = 16
 batch_size = 320
 step = 1
 input_rows = b_in.shape[0]
@@ -58,5 +58,11 @@ all_batches = [] # actually don't need it
 for _ in range(num_batches):
     train_batch, target_batch = train_data[count:count+batch_size], target_data[count:count+batch_size]
     count += batch_size
+
+# network preparation
+num_units = [256, 256]
+learning_rate = 0.001
+epochs = 2000
+temperature = 0.5
 
 np.savez('saved_data/training_data.npz', max_len=max_len, batch_size=batch_size, step=step, input_rows=input_rows, output_rows=output_rows, train_data=train_data, target_data=target_data)

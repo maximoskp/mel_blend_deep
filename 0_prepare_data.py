@@ -49,7 +49,7 @@ for pieceName in allDocs:
 # make matrix for each piece structure
 for p_i in p:
     # p_i.make_matrix()
-    p_i.make_matrix_padding(padding=32)
+    p_i.make_matrix_padding(padding=16)
 
 # make the unified binary input and output LSTM matrices for all pieces
 b_in = p[0].binary_matrix
