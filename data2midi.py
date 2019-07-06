@@ -8,6 +8,9 @@ Created on Wed Aug  8 23:50:50 2018
 
 import music21 as m21
 import numpy as np
+import os
+
+cwd = os.getcwd()
 
 def onehot2midi(bmt, fileName, padding=0):
     sc = m21.stream.Stream()
@@ -31,7 +34,8 @@ def onehot2midi(bmt, fileName, padding=0):
             sc.insert(0.25*(i-padding), tmpNote)
             # print(tmpPitch,' - ', tmpDur/4.0,' - ', 0.25*i)
     mf = m21.midi.translate.streamToMidiFile(sc)
-    destination="/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/simple_evo/"
+    destination = cwd
+#     destination="/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/simple_evo/"
     mf.open(destination + fileName, 'wb')
     mf.write()
     mf.close()
