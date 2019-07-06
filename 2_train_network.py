@@ -29,7 +29,7 @@ output_rows = npz_data['output_rows']
 train_data = npz_data['train_data']
 target_data = npz_data['target_data']
 
-num_units = [128, 256, 128]
+num_units = [256, 512, 256]
 learning_rate = 0.001
 epochs = 2000
 temperature = 1.0
