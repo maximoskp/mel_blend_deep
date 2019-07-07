@@ -23,7 +23,8 @@ import melody_features as mf
 
 mel_length = 64
 
-netEval = ne.NetEval('epoch_201')
+# netEval = ne.NetEval('epoch_201')
+netEval = ne.NetEval()
 
 '''
 # f han and deut

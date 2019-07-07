@@ -20,7 +20,8 @@ import init_pop_functions as ipf
 # import tensorflow as tf
 import data2midi as d2m
 
-netEval = ne.NetEval('epoch_394')
+# netEval = ne.NetEval('epoch_394')
+netEval = ne.NetEval()
 # highest pcp
 # target_features = [0.85, 1.91, 0.00, 0.21, 0.54, 0.76]
 # highest small intervals

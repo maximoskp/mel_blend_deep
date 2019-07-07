@@ -124,8 +124,8 @@ cost = tf.reduce_mean(dist)
 # restore saved model
 sess = tf.Session()
 saver = tf.train.Saver()
-# saver.restore(sess, 'saved_model/file.ckpt')
-saver.restore(sess, 'all_saved_models/epoch_25/saved_model/file.ckpt')
+saver.restore(sess, 'saved_model/file.ckpt')
+# saver.restore(sess, 'all_saved_models/epoch_25/saved_model/file.ckpt')
 # init_op = tf.global_variables_initializer()
 # sess.run(init_op)
 

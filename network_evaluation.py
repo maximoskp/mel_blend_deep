@@ -6,6 +6,7 @@ Created on Fri Aug  3 00:18:16 2018
 @author: maximoskaliakatsos-papakostas
 """
 
+import os
 import numpy as np
 import tensorflow as tf
 import scipy.stats as sp
@@ -14,8 +15,10 @@ import melody_features as mf
 class NetEval:
     'Loading a tensorflow model, dictionaries and (neutralised) seed and evaluating a given melody'
     
-    def __init__(self, model_folder):
-        self.main_path = '/Users/maximoskaliakatsos-papakostas/Documents/python/melody_blending_deep/simple_evo'
+    # def __init__(self, model_folder):
+    def __init__(self):
+        cwd = os.getcwd()
+        self.main_path = cwd
         self.npz_data = np.load('saved_data/training_data.npz')
         self.train_data = self.npz_data['train_data']
         self.initial_seed = self.train_data[:1:]
@@ -36,8 +39,8 @@ class NetEval:
         # restore saved model
         self.sess = tf.Session()
         saver = tf.train.Saver()
-        # saver.restore(sess, 'saved_model/file.ckpt')
-        saver.restore(self.sess, 'all_saved_models/'+model_folder+'/saved_model/file.ckpt')
+        saver.restore(sess, 'saved_model/file.ckpt')
+        # saver.restore(self.sess, 'all_saved_models/'+model_folder+'/saved_model/file.ckpt')
     # end constructor
     
     def rnn(self, x, weight, bias, input_rows):

@@ -22,7 +22,8 @@ import data2midi as d2m
 
 mel_length = 64
 
-netEval = ne.NetEval('epoch_283')
+# netEval = ne.NetEval('epoch_283')
+netEval = ne.NetEval()
 # f han and deut
 fhan = [0.70, 0.68, 0.00, 0.21, 0.61, 0.78]
 fdeut = [0.34, 1.97, 0.79, 0.54, 0.24, 0.78]
