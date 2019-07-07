@@ -39,7 +39,7 @@ class NetEval:
         # restore saved model
         self.sess = tf.Session()
         saver = tf.train.Saver()
-        saver.restore(sess, 'saved_model/file.ckpt')
+        saver.restore(self.sess, 'saved_model/file.ckpt')
         # saver.restore(self.sess, 'all_saved_models/'+model_folder+'/saved_model/file.ckpt')
     # end constructor
     
