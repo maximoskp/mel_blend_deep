@@ -25,7 +25,7 @@ class NetEval:
         self.max_len = self.npz_data['max_len']
         self.input_rows = self.npz_data['input_rows']
         self.output_rows = self.npz_data['output_rows']
-        self.num_units = [128, 256, 128]
+        self.num_units = self.npz_data['num_units']
         # model
         tf.reset_default_graph()
         
