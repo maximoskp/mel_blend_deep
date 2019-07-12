@@ -58,9 +58,14 @@ for i in range(1, len(p)):
     print('i:', i)
     b_in = np.hstack( (b_in, p[i].binary_matrix) )
     b_out = np.hstack( (b_out, p[i].binary_matrix) )
+
+# don't need the following, since it's being handled by the index layout
+# in the next script - where inputs and outputs are prepared
+'''
 # cut the last element from b_in and the first from b_out
 b_in = np.delete(b_in, -1, axis=1)
 b_out = np.delete(b_out, 0, axis=1)
+'''
 
 fig_testMat = plt.figure()
 plt.imshow(b_in, cmap='gray_r', interpolation='none')
